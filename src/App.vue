@@ -1,18 +1,25 @@
 <script lang="ts" setup>
-const nessage = /// <reference path="" />
+import { ref } from "vue";
+import taskForm from "./components/taskForm.vue";
 
-
+const message = ref("Tasks App");
 </script>
 
 <template>
   <main>
-    <h1></h1>
+    <h1>{{ message }}</h1>
+    <taskForm/>
   </main>
 </template>
 
-<style scoped>
+<style>
 main{
-  max-width: 800px;
-  margin: 1rem auto;
+  max-width: 500px;
+  margin: 3rem auto;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
